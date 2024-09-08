@@ -15,7 +15,7 @@ const embeddedOrigin = 'http://localhost:3000'
 
 const homeLocation = {
   title: 'Home',
-  href: '/',
+  href: '/blog',
 } satisfies DocumentLocation
 
 export default defineConfig({
@@ -32,7 +32,7 @@ export default defineConfig({
       resolve: {
         mainDocuments: defineDocuments([
           {
-            route: '/posts/:slug',
+            route: '/blog/:slug',
             filter: `type == "post" && slug.current == $slug`,
           },
         ]),

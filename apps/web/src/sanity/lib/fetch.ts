@@ -30,6 +30,7 @@ export async function sanityFetch<QueryResponse>({
     queryOptions.token = token;
     queryOptions.perspective = 'previewDrafts';
     queryOptions.stega = true;
+    queryOptions.useCdn = false;
 
     maybeRevalidate = 0; // Do not cache in Draft Mode
   } else if (tags.length) {
